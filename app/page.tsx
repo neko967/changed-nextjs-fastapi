@@ -16,6 +16,7 @@ export default async function Cart({
           {row.id} - {row.quantity}
         </div>
       ))*/}
+      testtext
     </div>
   );
 }
