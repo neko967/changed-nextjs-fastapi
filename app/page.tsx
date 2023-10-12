@@ -13,11 +13,11 @@ function PointerCoordinates() {
 
   return (
     <>
-    <div onMouseMove={handleMouseMove} style={{ height: '400px', width: '400px', border: '1px solid black' }}>
-      <p>Mouse X: {coordinates.x}</p>
-      <p>Mouse Y: {coordinates.y}</p>
-    </div>
-    
+      <div onMouseMove={handleMouseMove} style={{ height: '400px', width: '400px', border: '1px solid black' }}>
+        <p>Mouse X: {coordinates.x}</p>
+        <p>Mouse Y: {coordinates.y}</p>
+        aaa
+      </div>
     </>
   );
 }
