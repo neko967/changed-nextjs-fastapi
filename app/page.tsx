@@ -1,22 +1,25 @@
-import Image from "next/image";
-import Link from "next/link";
-import { sql } from "@vercel/postgres";
+"use client"
+import React, { useState } from 'react';
 
-export default async function Cart({
-  params
-} : {
-  params: { user: string }
-}): Promise<JSX.Element> {
-  //const { rows } = await sql`SELECT * from CARTS where user_id=${params.user}`;
+function PointerCoordinates() {
+  const [coordinates, setCoordinates] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (event) => {
+    setCoordinates({
+      x: event.clientX,
+      y: event.clientY
+    });
+  };
 
   return (
-    <div>
-      {/*rows.map((row) => (
-        <div key={row.id}>
-          {row.id} - {row.quantity}
-        </div>
-      ))*/}
-      testtext
+    <>
+    <div onMouseMove={handleMouseMove} style={{ height: '400px', width: '400px', border: '1px solid black' }}>
+      <p>Mouse X: {coordinates.x}</p>
+      <p>Mouse Y: {coordinates.y}</p>
     </div>
+    
+    </>
   );
 }
+
+export default PointerCoordinates;
