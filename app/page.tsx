@@ -15,7 +15,7 @@ function PointerCoordinates() {
     <div onMouseMove={handleMouseMove} style={{ height: '400px', width: '400px', border: '1px solid black' }}>
       <p>Mouse X: {coordinates.x}</p>
       <p>Mouse Y: {coordinates.y}</p>
-      bbb
+      aaa
     </div>
   );
 }
